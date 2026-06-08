@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>霄裡大池 - 桃園觀光導覽</title>
+    <style>
+        /* 基本樣式設定 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft JhengHei", sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+        }
+
+        /* 頁首與選單 */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex; /* 使用彈性佈局 */
+            justify-content: center;
+            flex-wrap: wrap; /* 內容過多時自動換行 */
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            color: #1abc9c;
+        }
+
+        /* 主要內容區 */
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .hero-section {
+            border-bottom: 2px solid #eee;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* 預設手機版一列 */
+            gap: 20px;
+        }
+
+        .info-card {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 5px solid #2c3e50;
+        }
+
+        /* 頁腳 */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* --- 響應式設計邏輯 --- */
+        
+        /* 當螢幕寬度大於 768px (電腦版) */
+        @media (min-width: 768px) {
+            nav ul {
+                flex-direction: row; /* 選單橫向排列 */
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr 1fr; /* 內容分為左右兩欄 */
+            }
+        }
+
+        /* 當螢幕較小 (手機版) */
+        @media (max-width: 767px) {
+            nav ul {
+                flex-direction: column; /* 選單垂直堆疊 */
+                text-align: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+                border-bottom: 1px solid #456789;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>霄裡大池</h1>
+        <p>桃園八德：埤塘之美與落羽松秘境</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">首頁</a></li>
+            <li><a href="#">關於</a></li>
+            <li><a href="#">服務</a></li>
+            <li><a href="#">聯絡</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <h2>景點介紹</h2>
+            <p>霄裡大池是八德地區面積最大的埤塘，擁有超過 200 年的歷史。這裡不僅是乾隆年間開墾的重要水源，現在更是著名的落羽松賞景勝地。每到秋冬季節，池畔的落羽松由綠轉紅，映照在湖面上，美不勝收。</p>
+        </head>
+
+        <section class="info-grid">
+            <div class="info-card">
+                <h3>📍 基本資訊</h3>
+                <p><strong>地址：</strong>桃園市八德區龍南路與霄裡路口</p>
+                <p><strong>開放時間：</strong>全年無休</p>
+                <p><strong>門票資訊：</strong>免費參觀</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>🚲 特色體驗</h3>
+                <p>這裡設有完善的環湖步道與自行車道，非常適合全家大小來此散步、騎車。附近還有著名的「霄裡浣衣池」，可以體驗客家文化的洗衫風情。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 桃園旅遊導覽練習 - 資料來源：桃園觀光導覽網</p>
+    </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>霄裡大池 - 百年埤塘與落羽松秘境</title>
+    <style>
+        /* --- 基礎樣式 --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+        }
+
+        body {
+            line-height: 1.7;
+            color: #333;
+            background-color: #f0f2f0; /* 淡淡的湖水綠背景 */
+        }
+
+        /* --- 頁首 --- */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80'); /* 模擬埤塘背景 */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        header h1 { font-size: 2.5rem; letter-spacing: 3px; }
+
+        /* --- 導覽列 (關鍵修改區) --- */
+        nav {
+            background-color: #2c3e50;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* 第一層選單 */
+        .main-nav {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-nav > li {
+            position: relative; /* 讓子選單能相對定位 */
+        }
+
+        .main-nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .main-nav a:hover { background-color: #1abc9c; }
+
+        /* 第二層子選單 (預設隱藏) */
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #34495e;
+            min-width: 160px;
+            list-style: none;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .submenu li a {
+            padding: 12px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #455a64;
+        }
+
+        /* 電腦版：滑鼠移上去顯示子選單 */
+        @media (min-width: 769px) {
+            .main-nav li:hover .submenu {
+                display: block;
+            }
+        }
+
+        /* --- 主要內容 --- */
+        main {
+            max-width: 1100px;
+            margin: 30px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .section-box { margin-bottom: 40px; }
+        h2 { border-left: 6px solid #1abc9c; padding-left: 15px; margin-bottom: 20px; color: #2c3e50; }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .card h3 { color: #16a085; margin-bottom: 10px; }
+
+        /* --- 頁腳 --- */
+        footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 30px 10px;
+            font-size: 0.9rem;
+        }
+
+        /* --- 手機版 RWD 修改 --- */
+        @media (max-width: 768px) {
+            .main-nav { flex-direction: column; text-align: center; }
+            
+            /* 手機版子選單展開邏輯：點擊主選單後顯示 (此處用 CSS 簡化處理) */
+            .main-nav li:active .submenu, .main-nav li:focus-within .submenu {
+                display: block;
+                position: static; /* 垂直堆疊 */
+            }
+
+            main { padding: 20px; margin: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>桃園八德．霄裡大池</h1>
+    <p>匯聚兩百年歷史的「桃園第一埤塘」</p>
+</header>
+
+<nav>
+    <ul class="main-nav">
+        <li><a href="#home">首頁</a></li>
+        <li><a href="#about">關於大池</a></li>
+        <li>
+            <a href="#flora">植物觀察 ▾</a>
+            <ul class="submenu">
+                <li><a href="#grass">小草（濕地植物）</a></li>
+                <li><a href="#tree">大樹（落羽松）</a></li>
+                <li><a href="#flower">花（波斯菊花海）</a></li>
+            </ul>
+        </li>
+        <li><a href="#history">文化歷史</a></li>
+        <li><a href="#contact">聯絡我們</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="home" class="section-box">
+        <h2>埤塘之源</h2>
+        <p>霄裡大池（霄裡池）面積廣達 6 甲，海拔約 150 公尺，是桃園八德地區面積最大的埤塘。這座大池不僅是乾隆年間平埔族與漢人共同開鑿的結晶，更見證了「看不盡的霄裡田，吃不完的霄裡米」的富饒傳奇。</p>
+    </section>
+
+    <section id="flora" class="section-box">
+        <h2>生態觀察重點</h2>
+        <div class="feature-grid">
+            <div class="card" id="tree">
+                <h3> 大樹：落羽松</h3>
+                <p>池畔成排的落羽松是這裡的招牌，冬季由綠轉紅，映照在如鏡面般的池水上，是攝影愛好者的婚紗聖地。</p>
+            </div>
+            <div class="card" id="grass">
+                <h3> 小草：濕地植群</h3>
+                <p>埤塘周邊保留了豐富的濕地生態，是觀察水生植物與在地候鳥停駐的絕佳地點。</p>
+            </div>
+            <div class="card" id="flower">
+                <h3>花：四季色彩</h3>
+                <p>除了冬季的落羽松，池邊與鄰近的浮筧街農田在休耕期常種植波斯菊與向日葵，形成夢幻花海。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="history" class="section-box">
+        <h2>深度文化：霄裡崖線</h2>
+        <p>霄裡地區位於桃園台地的崖線上，因地形高低差產生豐富的**湧泉**。您可以順著「茄苳霄裡陽光鐵馬道」往北騎，造訪擁有 260 年歷史的「石母娘娘浣衣池」，感受客家婦女一邊洗衣服一邊閒聊的古樸生活味。</p>
+    </section>
+</main>
+
+<footer>
+    <p>資料參考：桃園觀光導覽網、國家文化記憶庫</p>
+    <p>&copy; 2024 霄裡大池數位導覽練習專案</p>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>霄裡大池深度導覽 - 埤塘、植物與文化</title>
+    <style>
+        /* --- 基礎設定 --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft JhengHei", sans-serif;
+        }
+
+        body {
+            line-height: 1.8;
+            color: #333;
+            /* 背景圖設定為霄裡大池相關圖片，並固定背景 */
+            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
+                        url('https://travel.tycg.gov.tw/content/images/attractions/47547/1024x768_attractions-image-q_vly0_s_eu_p3scf7f4sw.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* --- 導覽列：兩層選單結構 --- */
+        nav {
+            background-color: rgba(46, 74, 60, 0.95); /* 深森林綠 */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-nav {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-nav > li { position: relative; }
+
+        .main-nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 18px 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .main-nav a:hover { background-color: #1abc9c; }
+
+        /* 子選單設定 */
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #3d5e4d;
+            min-width: 200px;
+            list-style: none;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .submenu li a {
+            padding: 12px 20px;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #4a6d5a;
+        }
+
+        /* 電腦版：懸浮顯示子選單 */
+        @media (min-width: 769px) {
+            .main-nav li:hover .submenu { display: block; }
+        }
+
+        /* --- 主要內容區塊 --- */
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        article {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        article h1 {
+            color: #2e4a3c;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #1abc9c;
+            padding-bottom: 10px;
+        }
+
+        article p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        blockquote {
+            font-style: italic;
+            background: #f0f4f2;
+            border-left: 8px solid #1abc9c;
+            padding: 20px 30px;
+            margin: 30px 0;
+            color: #555;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* 內容卡片排版 */
+        .info-section {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #1abc9c;
+        }
+
+        /* --- 手機版 RWD --- */
+        @media (max-width: 768px) {
+            .main-nav { flex-direction: column; }
+            .submenu { position: static; display: none; background-color: #243b30; }
+            /* 手機點擊展開 */
+            .main-nav li:active .submenu, .main-nav li:focus-within .submenu { display: block; }
+            
+            article { padding: 20px; }
+            article h1 { font-size: 1.6rem; }
+            blockquote { font-size: 1rem; padding: 15px; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #2e4a3c;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul class="main-nav">
+        <li><a href="#">首頁</a></li>
+        <li>
+            <a href="#about">關於大池 ▾</a>
+            <ul class="submenu">
+                <li><a href="#history">兩百年開墾史</a></li>
+                <li><a href="#geography">地理環境(湧泉)</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#flora">植物觀察 ▾</a>
+            <ul class="submenu">
+                <li><a href="#special-tree">總狀垂花楹</a></li>
+                <li><a href="#pine">池畔落羽松</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#culture">文化古蹟 ▾</a>
+            <ul class="submenu">
+                <li><a href="#stone-mother">石母娘娘浣衣池</a></li>
+                <li><a href="#temple">至德堂老屋</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <article>
+        <h1>霄裡大池：匯聚生命與歷史的碧波</h1>
+        <p>
+            位於桃園八德區的霄裡大池，是桃園歷史最悠久的埤塘之一。早在清乾隆六年（1741年），由平埔族與漢人合力開鑿而成。它不僅承載著灌溉千畝良田的重任，更孕育了獨特的客家聚落文化與豐富的生態多樣性。漫步於此，您可以感受到湧泉帶來的沁涼，與四季更迭的自然美景。
+        </p>
+
+        <blockquote>
+            「看不盡的霄裡田，吃不完的霄裡米。」這句古老的諺語，訴說著霄裡大池如何用無窮的生命力，滋養了這片土地兩百多年。
+        </blockquote>
+
+        <div id="special-tree" class="card">
+            <h3>🌿 植物觀察：總狀垂花楹</h3>
+            <p>在霄裡大池周邊，除了著名的落羽松，您還能尋覓到**總狀垂花楹**的蹤跡。這種植物在開花時節，細長的花序如簾幕般垂下，為埤塘增添了一抹充滿異國情調的優雅色彩。它是生態觀察者不容錯過的驚喜。</p>
+        </div>
+
+        <div id="culture" class="card">
+            <h3>🏛️ 文化古蹟：石母娘娘與浣衣池</h3>
+            <p>順著大池向外延伸，可以抵達著名的「石母娘娘」。這裡擁有天然湧泉形成的浣衣池，至今仍有當地居民在此洗衣聊天。這種「人水共生」的景象，是桃園客家文化中最珍貴的活體古蹟。</p>
+        </div>
+    </article>
+</main>
+
+<footer>
+    <p>資料來源：桃園觀光導覽網、文化部國家文化記憶庫</p>
+    <p>&copy; 2024 霄裡大池數位導覽專案</p>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>霄裡大池深度導覽 - 埤塘、植物與文化</title>
+    <style>
+        /* --- 基礎設定 --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+        }
+
+        body {
+            line-height: 1.8;
+            color: #333;
+            /* 背景圖：使用您提供的霄裡大池美景作為固定背景 */
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+                        url('https://tianya.tw/wp-content/uploads/20220126172648_96.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            scroll-behavior: smooth;
+        }
+
+        /* --- 導覽列：兩層選單結構 --- */
+        nav {
+            background-color: rgba(46, 74, 60, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .main-nav {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-nav > li { position: relative; }
+
+        .main-nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 18px 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .main-nav a:hover { background-color: #1abc9c; }
+
+        /* 子選單樣式 */
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #3d5e4d;
+            min-width: 200px;
+            list-style: none;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .submenu li a {
+            padding: 12px 20px;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* 電腦版顯示邏輯 */
+        @media (min-width: 769px) {
+            .main-nav li:hover .submenu { display: block; }
+        }
+
+        /* --- 主要內容區塊 --- */
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        article {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        article h1 {
+            font-size: 2.2rem;
+            color: #1e3329;
+            margin-bottom: 25px;
+            border-left: 10px solid #1abc9c;
+            padding-left: 20px;
+        }
+
+        article p {
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        blockquote {
+            font-style: italic;
+            background-color: #f0f7f4;
+            border-left: 8px solid #1abc9c;
+            padding: 25px;
+            margin: 35px 0;
+            color: #444;
+            font-size: 1.2rem;
+        }
+
+        /* 圖片展示區塊 */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .photo-card {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .photo-card p {
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        /* --- 響應式手機版 --- */
+        @media (max-width: 768px) {
+            .main-nav { flex-direction: column; text-align: center; }
+            .submenu { position: static; display: none; background-color: #243b30; }
+            .main-nav li:active .submenu, .main-nav li:focus-within .submenu { display: block; }
+            article { padding: 25px; }
+            article h1 { font-size: 1.6rem; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #1e3329;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul class="main-nav">
+        <li><a href="#">首頁</a></li>
+        <li>
+            <a href="#">關於大池 ▾</a>
+            <ul class="submenu">
+                <li><a href="history.html">歷史溯源(跳轉)</a></li>
+                <li><a href="culture.html">文化古蹟(跳轉)</a></li>
+                <li><a href="#about-section">本頁簡介</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">植物觀察 ▾</a>
+            <ul class="submenu">
+                <li><a href="#special-tree">總狀垂花楹</a></li>
+                <li><a href="#pine-tree">池畔落羽松</a></li>
+            </ul>
+        </li>
+        <li><a href="#">聯絡我們</a></li>
+    </ul>
+</nav>
+
+<main>
+    <article id="about-section">
+        <h1>霄裡大池：桃園第一埤塘之美</h1>
+        <p>
+            霄裡大池不僅是八德地區最大的埤塘，更是乾隆年間開墾的重要遺跡。這片水域見證了兩百多年的歷史變遷，從灌溉良田的命脈，轉型為如今結合自然與人文的觀光勝地。在這裡，您可以感受到湧泉帶來的沁涼，更能親眼目睹豐富的生物多樣性。
+        </p>
+
+        <blockquote>
+            「水色映天光，落羽隨風舞。」這正是霄裡大池最迷人的寫照，無論是晨曦或是黃昏，都有其獨特的風采。
+        </blockquote>
+
+        <div class="photo-gallery">
+            <div class="photo-card">
+                <img src="https://tcmbdata.culture.tw/api/collection/image/Culture_Place?uid=194781" alt="霄裡大池風景 1">
+                <p>湖光倒影與湛藍晴空</p>
+            </div>
+            <div class="photo-card">
+                <img src="https://travel.tycg.gov.tw/content/images/attractions/75994/1024x768_attractions-image-ssjjngz6fe6sborxz97cfa.jpg" alt="霄裡大池風景 2">
+                <p>冬日限定的紅褐落羽松步道</p>
+            </div>
+            <div class="photo-card">
+                <img src="https://tianya.tw/wp-content/uploads/%E9%9C%84%E8%A3%A1%E5%A4%A7%E6%B1%A0%E8%90%BD%E7%BE%BD%E6%9D%BE-2.jpg" alt="霄裡大池風景 3">
+                <p>雲朵映照在平靜如鏡的湖面</p>
+            </div>
+        </div>
+
+        <div id="special-tree" style="margin-top: 40px;">
+            <h2>🌿 特別的樹：總狀垂花楹</h2>
+            <p>
+                在霄裡大池的植物地圖中，除了著名的落羽松，最值得關注的便是「總狀垂花楹」。當它開花時，細長的花序如簾幕般垂下，為碧綠的埤塘增添了異國情調。這種植物的形態優美，是攝影愛好者深入導覽時必找的重點之一。
+            </p>
+        </div>
+
+        <div id="culture" style="margin-top: 20px;">
+            <h2>🏛️ 文化古蹟：石母娘娘與浣衣池</h2>
+            <p>
+                沿著大池步道前行，可以抵達具百年歷史的「石母娘娘」文化區。這裡的湧泉浣衣池不僅是古蹟，至今仍有當地居民維持洗衣習慣，展現了桃園最真實的客家人文生活場景。
+            </p>
+        </div>
+    </article>
+</main>
+
+<footer>
+    <p>資料參考：桃園觀光導覽網、文化部國家文化記憶庫</p>
+    <p>&copy; 2024 霄裡大池導覽專案</p>
+</footer>
+
+</body>
+</html>
